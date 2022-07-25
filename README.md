@@ -141,6 +141,5 @@ test
 <img width="30%"  title="Telegram Notifications" src="images/screenshots/telegramBot.jpg">
 </p>
 
-## <img width="4%" title="Selenoid" src="images/logo/Selenoid.svg"> An example of running a test in Selenoid
 
 <a target="_blank" href="https://t.me/YuriyMqa">t.me/dmitrishin13</a>
