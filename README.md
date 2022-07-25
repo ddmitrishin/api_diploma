@@ -18,7 +18,7 @@
 
 ## <a name="globe_with_meridians-covered-functionality"></a>:globe_with_meridians: Covered functionality
 
-### UI
+### API
 
 - [x] Successful Login
 - [x] Unsuccessful Login
@@ -143,9 +143,4 @@ test
 
 ## <img width="4%" title="Selenoid" src="images/logo/Selenoid.svg"> An example of running a test in Selenoid
 
-> A video is attached to each test in the report. One of these videos is shown below. Test case for checking the sending of an application to the company
-<p align="center">
-  <img title="Selenoid Video" src="images/gif/657f38371d02e78d321704cc37755f8e.gif">
-</p>
-
-:blue_heart: <a target="_blank" href="https://t.me/YuriyMqa">t.me/dmitrishin13</a>
+:red_heart: <a target="_blank" href="https://t.me/YuriyMqa">t.me/dmitrishin13</a>
