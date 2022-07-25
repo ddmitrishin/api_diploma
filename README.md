@@ -91,7 +91,7 @@ test
 ## <img width="4%" title="Jenkins" src="images/logo/Jenkins.svg"> Jenkins Build Main Page
 
 <p align="center">
-  <img src="images/screenshots/JenkinsMainPAge.jpg">
+  <img src="images/screenshots/jenkinsMainPage.jpg">
 </p>
 
 ## <img width="4%" title="Allure Report" src="images/logo/Allure_Report.svg"> Test results report in Allure Report
@@ -99,20 +99,20 @@ test
 ### :pushpin: Main page of the Allure report
 
 <p align="center">
-<img title="Allure Overview" src="images/screenshots/mainDachboardAR.jpg">
+<img title="Allure Overview" src="images/screenshots/mainAR.jpg">
 </p>
 
 ### :pushpin: Page with tests
 
 
 <p align="center">
-<img title="Allure Behaviors" src="images/screenshots/pageWithTests.jpg">
+<img title="Allure Behaviors" src="images/screenshots/pageWithTest.jpg">
 </p>
 
 ### :pushpin: Window with charts
 
 <p align="center">
-<img width="30%"  title="Allure Overview Dashboard" src="images/screenshots/chartsAR.jpg">
+<img width="30%"  title="Allure Overview Dashboard" src="images/screenshots/chartsR.jpg">
 </p>
 
 
@@ -122,14 +122,14 @@ test
 ### :pushpin: Test cases with launch history
 
 <p align="center">
-<img title="Allure Overview" src="images/screenshots/ATestOpstestcase.jpg">
+<img title="Allure Overview" src="images/screenshots/testCAseTesOps.jpg">
 </p>
 
 ### :pushpin: Dashboard
 
 
 <p align="center">
-<img title="Allure Behaviors" src="images/screenshots/ATestOpsDash.jpg">
+<img title="Allure Behaviors" src="images/screenshots/dashboardTO.jpg">
 </p>
 
 
@@ -138,7 +138,7 @@ test
 
 > After the build is completed, the bot created in <code>Telegram</code> automatically processes and sends a message with a report.
 <p align="center">
-<img width="30%"  title="Telegram Notifications" src="images/screenshots/telegramBot.jpg">
+<img width="30%"  title="Telegram Notifications" src="images/screenshots/telegBot.jpg">
 </p>
 
 
