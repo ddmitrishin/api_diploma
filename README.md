@@ -143,4 +143,4 @@ test
 
 ## <img width="4%" title="Selenoid" src="images/logo/Selenoid.svg"> An example of running a test in Selenoid
 
-:red_heart: <a target="_blank" href="https://t.me/YuriyMqa">t.me/dmitrishin13</a>
+<a target="_blank" href="https://t.me/YuriyMqa">t.me/dmitrishin13</a>
