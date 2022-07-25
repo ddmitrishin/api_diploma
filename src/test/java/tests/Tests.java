@@ -124,7 +124,7 @@ public class Tests extends TestBase {
     }
 
     @Test
-    @DisplayName("Single user not found")
+    @DisplayName("Check response for non-existent user")
     void singleUserNotFoundTest() {
         String emptyJson = null;
 
@@ -142,7 +142,7 @@ public class Tests extends TestBase {
     }
 
     @Test
-    @DisplayName("Create user")
+    @DisplayName("Creating user")
     void createTest() {
         User user = new User();
         user.setName("Dima");
