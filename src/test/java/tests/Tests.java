@@ -18,7 +18,7 @@ public class Tests extends TestBase {
         UserModel user = new UserModel();
         user.setEmail("eve.holt@reqres.in");
         user.setPassword("cityslicka");
-        String token = "QpwL5tke4Pnpja7X4";
+        String expectedToken = "QpwL5tke4Pnpja7X4";
 
         UserModel responseUser =
                 given()
@@ -31,7 +31,7 @@ public class Tests extends TestBase {
                         .log().body()
                         .extract().as(UserModel.class);
 
-        assertEquals(token, responseUser.getToken());
+        assertEquals(expectedToken, responseUser.getToken());
     }
 
     @Test
@@ -61,7 +61,7 @@ public class Tests extends TestBase {
         UserModel user = new UserModel();
         user.setEmail("eve.holt@reqres.in");
         user.setPassword("pistol");
-        Integer id = 4;
+        Integer expectedId = 4;
         String expectedToken = "QpwL5tke4Pnpja7X4";
 
         UserModel responseUser =
@@ -75,7 +75,7 @@ public class Tests extends TestBase {
                         .log().body()
                         .extract().as(UserModel.class);
 
-        assertEquals(id, responseUser.getId());
+        assertEquals(expectedId, responseUser.getId());
         assertEquals(expectedToken, responseUser.getToken());
     }
 
@@ -84,7 +84,7 @@ public class Tests extends TestBase {
     void unSuccessfulRegisterTest() {
         UserModel user = new UserModel();
         user.setEmail("sydney@fife");
-        String message = "Missing password";
+        String expectedMessage = "Missing password";
 
         Response response =
                 given()
@@ -97,15 +97,15 @@ public class Tests extends TestBase {
                         .log().body()
                         .extract().response();
 
-        assertEquals(message, response.path("error"));
+        assertEquals(expectedMessage, response.path("error"));
     }
 
     @Test
     @DisplayName("Check list resource")
     void listTest() {
-        Integer id = 1;
-        String name = "cerulean";
-        Integer year = 2000;
+        Integer expectedId = 1;
+        String expectedName = "cerulean";
+        Integer expectedYear = 2000;
 
         Response response =
                 given()
@@ -117,9 +117,9 @@ public class Tests extends TestBase {
                         .log().body()
                         .extract().response();
 
-        assertEquals(id, response.path("data[0].id"));
-        assertEquals(name, response.path("data[0].name"));
-        assertEquals(year, response.path("data[0].year"));
+        assertEquals(expectedId, response.path("data[0].id"));
+        assertEquals(expectedName, response.path("data[0].name"));
+        assertEquals(expectedYear, response.path("data[0].year"));
 
     }
 
