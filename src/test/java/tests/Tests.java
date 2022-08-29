@@ -19,7 +19,7 @@ public class Tests extends TestBase {
         UserModel user = new UserModel();
         user.setEmail("eve.holt@reqres.in");
         user.setPassword("cityslicka");
-        String expectedToken = "QpwL5tke4Pnpja7X4";
+        String token = "QpwL5tke4Pnpja7X4";
 
         UserModel responseUser =
                 given()
@@ -32,7 +32,7 @@ public class Tests extends TestBase {
                         .log().body()
                         .extract().as(UserModel.class);
 
-        assertEquals(expectedToken, responseUser.getToken());
+        assertEquals(token, responseUser.getToken());
     }
 
     @Test
@@ -62,8 +62,8 @@ public class Tests extends TestBase {
         UserModel user = new UserModel();
         user.setEmail("eve.holt@reqres.in");
         user.setPassword("pistol");
-        Integer expectedId = 4;
-        String expectedToken = "QpwL5tke4Pnpja7X4";
+        Integer id = 4;
+        String token = "QpwL5tke4Pnpja7X4";
 
         UserModel responseUser =
                 given()
@@ -76,8 +76,8 @@ public class Tests extends TestBase {
                         .log().body()
                         .extract().as(UserModel.class);
 
-        assertEquals(expectedId, responseUser.getId());
-        assertEquals(expectedToken, responseUser.getToken());
+        assertEquals(id, responseUser.getId());
+        assertEquals(token, responseUser.getToken());
     }
 
     @Test
@@ -85,7 +85,7 @@ public class Tests extends TestBase {
     void unSuccessfulRegisterTest() {
         UserModel user = new UserModel();
         user.setEmail("sydney@fife");
-        String expectedMessage = "Missing password";
+        String message = "Missing password";
 
         Response response =
                 given()
@@ -98,15 +98,15 @@ public class Tests extends TestBase {
                         .log().body()
                         .extract().response();
 
-        assertEquals(expectedMessage, response.path("error"));
+        assertEquals(message, response.path("error"));
     }
 
     @Test
     @DisplayName("Check list resource")
     void listTest() {
-        Integer expectedId = 1;
-        String expectedName = "cerulean";
-        Integer expectedYear = 2000;
+        Integer id = 1;
+        String name = "cerulean";
+        Integer year = 2000;
 
         Response response =
                 given()
@@ -118,9 +118,9 @@ public class Tests extends TestBase {
                         .log().body()
                         .extract().response();
 
-        assertEquals(expectedId, response.path("data[0].id"));
-        assertEquals(expectedName, response.path("data[0].name"));
-        assertEquals(expectedYear, response.path("data[0].year"));
+        assertEquals(id, response.path("data[0].id"));
+        assertEquals(name, response.path("data[0].name"));
+        assertEquals(year, response.path("data[0].year"));
 
     }
 
@@ -166,7 +166,7 @@ public class Tests extends TestBase {
     }
 
     @Test
-    public void checkEmailAndFirstNameUsingGroovy() {
+    public void checkEmailAndFirstNameUsingGroovyTest() {
         given()
                 .spec(request)
                 .when()
