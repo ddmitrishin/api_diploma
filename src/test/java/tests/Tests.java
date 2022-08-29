@@ -6,6 +6,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
+import static org.hamcrest.Matchers.hasItem;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static specs.Specs.*;
@@ -162,5 +163,19 @@ public class Tests extends TestBase {
         assertNotEquals(responseUser.getId(), null);
         assertEquals(user.getName(), responseUser.getName());
         assertEquals(user.getJob(), responseUser.getJob());
+    }
+
+    @Test
+    public void checkEmailAndFirstNameUsingGroovy() {
+        given()
+                .spec(request)
+                .when()
+                .get("/users?page=2")
+                .then()
+                .log().body()
+                .body("data.findAll{it.email =~/.*?@reqres.in/}.email.flatten()",
+                        hasItem("michael.lawson@reqres.in"))
+                .body("data.findAll{it.first_name}.first_name.flatten()",
+                        hasItem("Lindsay"));
     }
 }
